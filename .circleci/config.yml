@@ -1,0 +1,38 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: "sudo npm install -g npm"
+      - run:
+          name: install-packages
+          command: npm install --safe
+      - run:
+          name: install supertest
+          command: "sudo npm install supertest -g"
+      - run:
+          name: install mocha
+          command: "sudo npm install mocha -g"
+      - run:
+          name: install chai
+          command: "sudo npm install chai -g"
+      - run:
+          name: install joi          
+          command: "sudo npm install joi -g"
+      - run:
+          name: install joi-assert
+          command: "sudo npm install joi-assert -g"
+      - run:
+          name: install mochawesome
+          command: "sudo npm install mochawesome -g"
+      - run:
+          name: install faker
+          command: "sudo npm install faker -g"
+      - run:
+          name: test
+          command: "npm run exec_teste"

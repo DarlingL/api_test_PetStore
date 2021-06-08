@@ -1,4 +1,4 @@
-# Desafio API PetStore[![Circle CI](https://circleci.com/gh/DarlingL/api_test_PetStore.svg?style=shield)](https://circleci.com/gh/DarlingL/api_test_PetStore)
+# Desafio API PetStore [![Circle CI](https://circleci.com/gh/DarlingL/api_test_PetStore.svg?style=shield)](https://circleci.com/gh/DarlingL/api_test_PetStore)
 
 ## **Objetivo:**
   Teste de API/Contrato, realizando os seguintes cenários: 

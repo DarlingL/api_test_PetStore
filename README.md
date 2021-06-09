@@ -4,7 +4,15 @@
   Teste de API/Contrato, realizando os seguintes cenários: 
 
   ```
- 
+    ✓ Criar Novo Usuário 
+    ✓ Buscar Usuário Criado 
+    ✓ Buscar Usuário - Inválido 404 
+    ✓ Buscar Usuário - Sem Passar Username 405 
+    ✓ Alterar Informações do Usuário 
+    ✓ Validar Informações Alteradas do Usuário 
+    ✓ Buscar Usuário Criado - Exibindo Campos 
+    ✓ Deletar Usuário 
+    ✓ Validar Usuário Deletado 
   ```
 
 ## **Frameworks Utilizados:**

@@ -4,7 +4,7 @@
   "description": "Teste de Contratos",
   "main": "contract_testing.js",
   "scripts": {
-    "exec_teste": "NODE_ENV=https://petstore.swagger.io/ mocha teste/teste.js --reporter mochawesome"
+    "exec_teste": "NODE_ENV=https://petstore.swagger.io/v2 mocha teste/teste.js --reporter mochawesome"
   },
   "author": "Darling",
   "license": "ISC",

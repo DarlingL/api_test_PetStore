@@ -7,7 +7,7 @@
 
   // Payloads e Variaveis
   var nome_user = "";
-  const nome_user_invalido = "USU4R1O 1NV4LID0"; 
+  const nome_user_invalido = "USU4R1O 1NV4LID0";
   const {
     novo_user,
     novo_user_alt_infos,
@@ -44,7 +44,7 @@ describe("Cenários de Testes - Pet Store", function() {
   it("Buscar Usuário Criado", function(done) {
     this.timeout(request_timeout);
     request(URL)
-    .get(PATH_USER + '/' + nome_user)
+    .get(PATH_USER + "/" + nome_user)
     .expect("Content-Type", /json/)
     .end(function(err, res) {
       expect(res.status).to.be.eql(200);
@@ -56,7 +56,7 @@ describe("Cenários de Testes - Pet Store", function() {
   it("Buscar Usuário - Inválido 404", function(done) {
     this.timeout(request_timeout);
     request(URL)
-    .get(PATH_USER + '/' + nome_user_invalido)
+    .get(PATH_USER + "/" + nome_user_invalido)
     .expect("Content-Type", /json/)
     .end(function(err, res) {
       expect(res.status).to.be.eql(404);
@@ -77,7 +77,7 @@ describe("Cenários de Testes - Pet Store", function() {
   it("Alterar Informações do Usuário", function(done) {
     this.timeout(request_timeout);
     request(URL)
-    .put(PATH_USER + '/' + nome_user)
+    .put(PATH_USER + "/" + nome_user)
     .send(novo_user_alt_infos)
     .expect("Content-Type", /json/)
     .end(function(err, res) {
@@ -89,7 +89,7 @@ describe("Cenários de Testes - Pet Store", function() {
   it("Validar Informações Alteradas do Usuário", function(done) {
     this.timeout(request_timeout);
     request(URL)
-    .get(PATH_USER + '/' + nome_user)
+    .get(PATH_USER + "/" + nome_user)
     .expect("Content-Type", /json/)
     .end(function(err, res) {
       expect(res.status).to.be.eql(200);
@@ -102,7 +102,7 @@ describe("Cenários de Testes - Pet Store", function() {
   it("Buscar Usuário Criado - Exibindo Campos", function(done) {
     this.timeout(request_timeout);
     request(URL)
-    .get(PATH_USER + '/' + nome_user)
+    .get(PATH_USER + "/" + nome_user)
     .expect("Content-Type", /json/)
     .end(function(err, res) {
       console.log(`O Id do usuário: ${res.body.id}`);
@@ -122,7 +122,7 @@ describe("Cenários de Testes - Pet Store", function() {
   it("Deletar Usuário", function(done) {
     this.timeout(request_timeout);
     request(URL)
-    .delete(PATH_USER + '/' + nome_user)
+    .delete(PATH_USER + "/" + nome_user)
     .expect("Content-Type", /json/)
     .end(function(err, res) {
       expect(res.status).to.be.eql(200);
@@ -133,7 +133,7 @@ describe("Cenários de Testes - Pet Store", function() {
   it("Validar Usuário Deletado", function(done) {
     this.timeout(request_timeout);
     request(URL)
-    .get(PATH_USER + '/' + nome_user)
+    .get(PATH_USER + "/" + nome_user)
     .expect("Content-Type", /json/)
     .end(function(err, res) {
       expect(res.status).to.be.eql(404);

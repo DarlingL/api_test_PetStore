@@ -4,25 +4,25 @@
 const Joi = require("joi");
 
 const schemaUserCriado = Joi.object({
+  code: Joi.number().required(),
   message: Joi.string().required(),
   type: Joi.string().required(),
-  code: Joi.number().required(),
 });
 
 const schemaUser = Joi.object({
-  id: Joi.number().required(),
-  username: Joi.string().required(),
-  firstName: Joi.string().required(),
-  lastName: Joi.string().required(),
   email: Joi.string().required(),
+  firstName: Joi.string().required(),
+  id: Joi.number().required(),
+  lastName: Joi.string().required(),
   password: Joi.string().required(),
   phone: Joi.string().required(),
   userStatus: Joi.number().required(),
+  username: Joi.string().required(),
 });
 
 
 
 module.exports = {
-  schemaUserCriado,
-  schemaUser
-  };
+  schemaUser,
+  schemaUserCriado
+};
